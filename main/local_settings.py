@@ -24,6 +24,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+CORS_ALLOW_ORIGINS = [
+    "http://localhost:3000",
+    "https://pennypal.vercel.app",
+    # Add more allowed origins here
+]
+
 
 # Application definition
 
