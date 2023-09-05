@@ -1,0 +1,14 @@
+django admin panel:  
+    username - pennypal 
+    password - admin@123!
+
+drf users
+    - User 1
+        username - johndoe
+        email - johndoe@email.com
+        password - user@123!
+
+    - User 2
+        username - lindajones
+        email - lindajones@email.com
+        password - user@123!
