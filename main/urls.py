@@ -14,8 +14,22 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from budgetbuddy import views
+
+router = DefaultRouter()
+router.register(r'usertotal', views.UserTotalViewSet)
+router.register(r'income', views.IncomeViewSet)
+router.register(r'transactions', views.TransactionViewSet)
+router.register(r'budget', views.BudgetViewSet)
+
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
+    path('admin/', admin.site.urls),
+    # path('app/', include('budgetbuddy.urls')),
+    path('user/', include(router.urls)),
+    path('auth/', include('djoser.urls')),
+    path('auth/', include('djoser.urls.authtoken')),
+    path(r'^auth/', include('drf_social_oauth2.urls', namespace='drf'))
 ]

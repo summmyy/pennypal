@@ -5,6 +5,9 @@ when you are in your local environment.
 
 import os
 from pathlib import Path
+import pymysql
+
+pymysql.install_as_MySQLdb()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -31,8 +34,14 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    'budgetbuddy',
     "rest_framework",
     "corsheaders",
+    'djoser',
+    'rest_framework.authtoken',
+    'social_django',
+    'oauth2_provider',
+    'drf_social_oauth2',
 ]
 
 MIDDLEWARE = [
