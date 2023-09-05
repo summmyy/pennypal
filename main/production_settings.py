@@ -29,11 +29,7 @@ ALLOWED_HOSTS = ["*"]
 # Comment out the following line and place your railway URL, and your production URL in the array.
 CSRF_TRUSTED_ORIGINS = ["https://pennypal.up.railway.app/"]
 
-CORS_ALLOW_ORIGINS = [
-    "http://localhost:3000",
-    "https://pennypal.vercel.app",
-    # Add more allowed origins here
-]
+CORS_ALLOW_ALL_ORIGINS = True
 
 
 # Application definition
