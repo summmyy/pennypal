@@ -84,9 +84,18 @@ DATABASES = {
         "PASSWORD": os.environ["PGPASSWORD"],
         "HOST": os.environ["PGHOST"],
         "PORT": os.environ["PGPORT"],
-    }
-}
-
+    },
+    'pennypal': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'pennypal',
+            'HOST': '127.0.0.1',
+            'PORT': '3306',
+            'USER': 'pennyadmin',
+            'PASSWORD': 'admin123!',
+            'OPTIONS': {
+                'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+            }
+}}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
